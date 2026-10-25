@@ -1,0 +1,52 @@
+
+<section class="portfolio">
+  <header class="portfolio-header">
+    <h1>Portfolio</h1>
+    <p>A collection of manga pages and illustrations.</p>
+  </header>
+
+  <div class="portfolio-filters">
+    <button
+      type="button"
+      [class.active]="selectedCategory() === 'all'"
+      (click)="setCategory('all')"
+    >
+      All
+    </button>
+
+    <button
+      type="button"
+      [class.active]="selectedCategory() === 'manga'"
+      (click)="setCategory('manga')"
+    >
+      Manga
+    </button>
+
+    <button
+      type="button"
+      [class.active]="selectedCategory() === 'illustration'"
+      (click)="setCategory('illustration')"
+    >
+      Illustrations
+    </button>
+  </div>
+
+  <div class="portfolio-gallery">
+    @for (artwork of filteredArtworks(); track artwork.id) {
+      <article class="artwork-card">
+        <div class="artwork-image">
+          <img
+            [src]="artwork.image"
+            [alt]="artwork.title"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="artwork-info">
+          <h2>{{ artwork.title }}</h2>
+          <span>{{ artwork.category }}</span>
+        </div>
+      </article>
+    }
+  </div>
+</section>

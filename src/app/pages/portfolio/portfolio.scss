@@ -1,0 +1,125 @@
+
+:host {
+  display: block;
+}
+
+.portfolio {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 4rem);
+}
+
+.portfolio-header {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #a1a1aa;
+    line-height: 1.6;
+  }
+}
+
+.portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+
+  button {
+    padding: 0.65rem 1.25rem;
+    border: 1px solid #3f3f46;
+    border-radius: 6px;
+    background: transparent;
+    color: #a1a1aa;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #fff;
+      border-color: #a78bfa;
+    }
+
+    &.active {
+      background: #a78bfa;
+      border-color: #a78bfa;
+      color: #18181b;
+    }
+  }
+}
+
+
+.portfolio-gallery {
+  columns: 3;
+  column-gap: 1.5rem;
+}
+
+
+
+.artwork-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+
+  overflow: hidden;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  background: #111114;
+}
+
+
+.artwork-image {
+  width: 100%;
+  background: #18181b;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.artwork-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.artwork-card:hover .artwork-image img {
+  transform: scale(1.04);
+}
+
+.artwork-info {
+  padding: 1rem;
+
+  h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  span {
+    color: #a1a1aa;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .portfolio-gallery {
+    columns: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-gallery {
+    columns: 1;
+  }
+}

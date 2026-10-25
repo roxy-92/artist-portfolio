@@ -1,40 +1,70 @@
-# Artist Portfolio: High-Performance Visual Media Showcase
+# Artist Portfolio
 
-A high-performance, media-centric Angular frontend application engineered specifically to display sequential art, comics, and illustrations. Designed as an architectural prototype demonstrating zero-runtime-cost static hosting, browser-native canvas manipulation, and advanced layout rendering without heavy external gallery libraries.
+A responsive artwork gallery developed with **Angular, TypeScript and SCSS**, created to demonstrate frontend development skills through a practical, visually focused project.
 
----
+**[View Live Website](https://roxy-92.github.io/artist-portfolio/)**
 
-## Technical Highlights & Architecture
+## Project Overview
 
-* **Framework Core**: Angular (latest standalone architecture), TypeScript (strict mode enabled), SCSS.
-* **State Management**: Reactive state isolation via Angular Signals (`signal`, `computed`, `effect`), eliminating unnecessary zone re-renders.
-* **Zero Cumulative Layout Shift (CLS)**: Dynamic CSS `aspect-ratio` bounding boxes pre-calculated at the data layer to preserve exact rendering coordinates prior to image network delivery.
-* **Responsive Asset Pipeline**: High-density display targeting utilizing `<picture>` and `srcset` for AVIF and WebP delivery, backed by native asynchronous decoding (`decoding="async"`) and lazy loading (`loading="lazy"`).
-* **Native Canvas Pixel Sampling**: Offscreen HTML5 Canvas execution (`getImageData`) to dynamically extract dominant and accent color palettes from active visual assets, binding them directly to root CSS custom properties for ambient UI theming.
-* **Hardware-Accelerated View Engines**:
-  * **Masonry Mode**: Responsive multi-column layout engine reflowing dynamically across breakpoints without column gaps or image clipping.
-  * **Dual-Page Spread Reader Mode**: Double-page desktop rendering with seamless single-page mobile fallback, Right-to-Left (RTL) reading toggle for manga formats, and native keyboard navigation listeners.
-  * **Webtoon Infinite Scroll Mode**: High-framerate vertical strip rendering designed for continuous sequential storytelling with optimized viewport memory management.
-  * **Lightroom Detail Modal**: Interactive canvas/matrix transform viewer supporting wheel zoom, click-drag panning, and mobile touch gestures.
+Artist Portfolio combines original manga and illustration artwork with modern frontend development techniques.
 
----
+The main objective is to build a functional, responsive website that adapts to different screen sizes while providing an intuitive way to browse visual content.
 
-## Component Architecture & Hierarchy
+Rather than serving exclusively as an artistic portfolio, this project is designed to showcase practical experience with Angular, component-based architecture, reactive state management and responsive interface development.
 
-The application strictly separates presentational components, business state, and browser-level integrations:
+## Technologies
 
-```text
-src/app/
-├── core/
-│   ├── constants/             # Immutable configuration and static datasets
-│   ├── models/                # Domain types (Artwork, LayoutMode, ExtractedPalette)
-│   └── services/              # Global signal stores and Canvas extraction engines
-├── features/
-│   ├── comic-spread/          # Dual-page RTL/LTR reading engine
-│   ├── gallery/               # Masonry layout, category filters, and mode toggles
-│   ├── lightroom/             # Pan/zoom modal inspection layer
-│   └── webtoon/               # Vertical continuous strip reader
-└── shared/
-    └── components/
-        ├── artwork-card/      # Zero-CLS media unit with LQIP placeholder
-        └── palette-glow/      # Ambient background lighting provider
+- **Angular:** Component-based architecture, routing and dynamic templates.
+- **TypeScript:** Strongly typed artwork data and application logic.
+- **HTML5:** Semantic page structure.
+- **SCSS:** Custom styling, responsive layouts and media queries.
+- **CSS Flexbox and Multi-column Layout:** Adaptive navigation and masonry-style image gallery.
+- **Git & GitHub:** Version control and project management.
+- **GitHub Pages:** Website hosting and deployment.
+
+## Features
+
+### Responsive Navigation
+- Desktop navigation with active route highlighting.
+- Collapsible hamburger menu for smaller screens.
+- Interactive menu controlled through Angular signals.
+
+### Artwork Gallery
+- Dynamic artwork rendering using Angular's `@for` syntax.
+- Masonry-style layout preserving the original proportions of images.
+- Responsive gallery with three, two or one column depending on screen size.
+- Separate categories for manga and illustrations.
+- Interactive category filtering using Angular `signal()` and `computed()`.
+
+### Responsive Design
+- Fluid typography and spacing using CSS `clamp()`.
+- Adaptive layouts using SCSS media queries.
+- Consistent styling across desktop, tablet and mobile devices.
+
+## Development Goals
+
+This project focuses on:
+
+- Strengthening practical Angular and TypeScript skills.
+- Developing responsive, accessible user interfaces.
+- Working with dynamic data and reactive state.
+- Organising frontend code into maintainable components.
+- Applying modern CSS techniques to real-world layouts.
+
+## Planned Improvements
+
+- Full-size artwork viewer (lightbox).
+- Further accessibility improvements.
+- Additional interactive gallery features.
+- Continued refinement of the website's design and responsiveness.
+
+## Author
+
+**Florina Roxana Marinca Ardelean (Roxy Hana)**
+
+Frontend Developer & Illustrator
+
+- [GitHub](https://github.com/roxy-92)
+- [Artist Website](https://roxyhana.art/)
+
+All artwork displayed in this project is original and remains the property of its creator.
