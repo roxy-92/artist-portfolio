@@ -1,12 +1,20 @@
 
-import { Component, signal, computed } from '@angular/core';
+import { Component, signal, computed, HostListener } from '@angular/core';
+import artworkData from '../../artworks.generated.json';
+
+// Artwork categories
+type ArtworkCategory =
+  | 'manga'
+  | 'illustration'
+  | 'character-design'
+  | 'background';
 
 // Artwork data structure
 interface Artwork {
-  id: number;
+  id: string;
   title: string;
   image: string;
-  category: 'manga' | 'illustration';
+  category: ArtworkCategory;
 }
 
 @Component({
@@ -17,34 +25,13 @@ interface Artwork {
 })
 export class Portfolio {
 
-  // Artwork collection
-  artworks: Artwork[] = [
-    ...Array.from({ length: 13 }, (_, index) => ({
-      id: index + 1,
-      title: `Manga ${index + 1}`,
-      image: `images/portfolio/manga (${index + 1}).jpg`,
-      category: 'manga' as const,
-    })),
-
-    ...Array.from({ length: 8 }, (_, index) => ({
-      id: index + 14,
-      title: `Illustration ${index + 1}`,
-      image: `images/portfolio/manga (${index + 1}).jpg`,
-      category: 'illustration' as const,
-    })),
-
-    {
-      id: 22,
-      title: 'Between Panels',
-      image: 'images/portfolio/between_panels_wallpaper.png',
-      category: 'illustration',
-    },
-  ];
+  // Automatically generated artwork collection
+  artworks: Artwork[] = artworkData as Artwork[];
 
   // Selected gallery category
-  selectedCategory = signal<'all' | 'manga' | 'illustration'>('all');
+  selectedCategory = signal<'all' | ArtworkCategory>('all');
 
-  // Filter artwork by category
+  // Artworks matching the selected category
   filteredArtworks = computed(() => {
     const category = this.selectedCategory();
 
@@ -57,8 +44,63 @@ export class Portfolio {
     );
   });
 
-  // Change selected category
-  setCategory(category: 'all' | 'manga' | 'illustration') {
+  // Currently selected artwork in the lightbox
+  selectedArtwork = signal<Artwork | null>(null);
+
+  // Change gallery category
+  setCategory(category: 'all' | ArtworkCategory) {
     this.selectedCategory.set(category);
+  }
+
+  // Open the lightbox
+  openLightbox(artwork: Artwork) {
+    this.selectedArtwork.set(artwork);
+  }
+
+  // Close the lightbox
+  closeLightbox() {
+    this.selectedArtwork.set(null);
+  }
+
+  // Navigate through the filtered artworks
+  navigateLightbox(direction: number) {
+    const current = this.selectedArtwork();
+
+    if (!current) return;
+
+    const artworks = this.filteredArtworks();
+
+    const currentIndex = artworks.findIndex(
+      artwork => artwork.id === current.id
+    );
+
+    if (currentIndex === -1) return;
+
+    const nextIndex =
+      (currentIndex + direction + artworks.length) % artworks.length;
+
+    this.selectedArtwork.set(artworks[nextIndex]);
+  }
+
+  // Keyboard navigation for the lightbox
+  @HostListener('document:keydown', ['$event'])
+  onKeyDown(event: KeyboardEvent) {
+    if (!this.selectedArtwork()) return;
+
+    switch (event.key) {
+      case 'ArrowLeft':
+        event.preventDefault();
+        this.navigateLightbox(-1);
+        break;
+
+      case 'ArrowRight':
+        event.preventDefault();
+        this.navigateLightbox(1);
+        break;
+
+      case 'Escape':
+        this.closeLightbox();
+        break;
+    }
   }
 }

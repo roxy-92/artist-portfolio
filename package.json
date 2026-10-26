@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prestart": "node scripts/generate-artworks.mjs",
+    "prebuild": "node scripts/generate-artworks.mjs"
   },
   "private": true,
   "packageManager": "npm@11.19.1",

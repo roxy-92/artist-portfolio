@@ -29,24 +29,98 @@
     >
       Illustrations
     </button>
+    
+    <button
+      type="button"
+      [class.active]="selectedCategory() === 'character-design'"
+      (click)="setCategory('character-design')"
+    >
+      Character Design
+    </button>
+
+    <button
+      type="button"
+      [class.active]="selectedCategory() === 'background'"
+      (click)="setCategory('background')"
+    >
+      Backgrounds
+    </button>
+
   </div>
 
   <div class="portfolio-gallery">
     @for (artwork of filteredArtworks(); track artwork.id) {
       <article class="artwork-card">
-        <div class="artwork-image">
+        
+        <button
+          class="artwork-image"
+          type="button"
+          [attr.aria-label]="'View ' + artwork.title"
+          (click)="openLightbox(artwork)"
+        >
           <img
             [src]="artwork.image"
             [alt]="artwork.title"
             loading="lazy"
           />
-        </div>
+        </button>
+
 
         <div class="artwork-info">
-          <h2>{{ artwork.title }}</h2>
           <span>{{ artwork.category }}</span>
         </div>
       </article>
     }
   </div>
 </section>
+
+
+
+@if (selectedArtwork(); as artwork) {
+  <div class="lightbox" (click)="closeLightbox()">
+
+    <button
+      class="lightbox-close"
+      type="button"
+      aria-label="Close image"
+      (click)="closeLightbox()"
+    >
+      &times;
+    </button>
+
+    <button
+      class="lightbox-prev"
+      type="button"
+      aria-label="Previous artwork"
+      (click)="$event.stopPropagation(); navigateLightbox(-1)"
+    >
+      &#10094;
+    </button>
+
+    <div
+      class="lightbox-content"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="artwork.title"
+      (click)="$event.stopPropagation()"
+    >
+      <img
+        [src]="artwork.image"
+        [alt]="artwork.title"
+      />
+
+      <p>{{ artwork.title }}</p>
+    </div>
+
+    <button
+      class="lightbox-next"
+      type="button"
+      aria-label="Next artwork"
+      (click)="$event.stopPropagation(); navigateLightbox(1)"
+    >
+      &#10095;
+    </button>
+
+  </div>
+}
+

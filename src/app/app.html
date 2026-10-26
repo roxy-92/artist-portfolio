@@ -27,8 +27,9 @@
     [class.open]="menuOpen()"
   >
     <a
-      routerLink="/portfolio"
+      routerLink="/"
       routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
       (click)="closeMenu()"
     >Portfolio</a>
 
@@ -47,7 +48,16 @@
   </main>
 
   <footer class="app-footer">
-    <p>&copy; 2026 Florina Roxana Marinca Ardelean.
-      All rights reserved.</p>
+    <p>&copy; 2026 Florina Roxana Marinca Ardelean. All rights reserved.</p>
+
+    <a
+      href="https://github.com/roxy-92"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub profile"
+      class="footer-link"
+    >
+      GitHub
+    </a>
   </footer>
 </div>

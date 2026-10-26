@@ -1,0 +1,111 @@
+
+:host {
+  display: block;
+}
+
+.about {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+.about-header {
+  margin-bottom: 3rem;
+
+  .eyebrow {
+    color: #a78bfa;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  h1 {
+    margin: 0.75rem 0;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+}
+
+.about-section {
+  margin-bottom: 3.5rem;
+
+  h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+    color: #f4f4f5;
+  }
+
+  > p {
+    max-width: 750px;
+    color: #a1a1aa;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+}
+
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  background: #111114;
+
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: #a78bfa;
+    transform: translateY(-3px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 4px;
+  }
+
+  .profile-category {
+    color: #a78bfa;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  h3 {
+    margin: 1rem 0 0.5rem;
+    color: #f4f4f5;
+    font-size: 1.2rem;
+  }
+
+  p {
+    flex: 1;
+    color: #a1a1aa;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .profile-action {
+    margin-top: 1.5rem;
+    color: #c4b5fd;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-links {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    margin-bottom: 2.5rem;
+  }
+}

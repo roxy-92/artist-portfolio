@@ -1,0 +1,254 @@
+[
+  {
+    "id": "bg/bg (1).jpg",
+    "title": "bg (1)",
+    "image": "images/portfolio/bg/bg%20(1).jpg",
+    "category": "background"
+  },
+  {
+    "id": "bg/bg (2).jpg",
+    "title": "bg (2)",
+    "image": "images/portfolio/bg/bg%20(2).jpg",
+    "category": "background"
+  },
+  {
+    "id": "bg/bg (3).jpg",
+    "title": "bg (3)",
+    "image": "images/portfolio/bg/bg%20(3).jpg",
+    "category": "background"
+  },
+  {
+    "id": "bg/bg (4).jpg",
+    "title": "bg (4)",
+    "image": "images/portfolio/bg/bg%20(4).jpg",
+    "category": "background"
+  },
+  {
+    "id": "bg/bg (5).jpg",
+    "title": "bg (5)",
+    "image": "images/portfolio/bg/bg%20(5).jpg",
+    "category": "background"
+  },
+  {
+    "id": "bg/bg (6).jpg",
+    "title": "bg (6)",
+    "image": "images/portfolio/bg/bg%20(6).jpg",
+    "category": "background"
+  },
+  {
+    "id": "bg/bg (7).jpg",
+    "title": "bg (7)",
+    "image": "images/portfolio/bg/bg%20(7).jpg",
+    "category": "background"
+  },
+  {
+    "id": "bg/bg (8).jpg",
+    "title": "bg (8)",
+    "image": "images/portfolio/bg/bg%20(8).jpg",
+    "category": "background"
+  },
+  {
+    "id": "bg/bg (9).jpg",
+    "title": "bg (9)",
+    "image": "images/portfolio/bg/bg%20(9).jpg",
+    "category": "background"
+  },
+  {
+    "id": "character_design/character (1).jpg",
+    "title": "character (1)",
+    "image": "images/portfolio/character_design/character%20(1).jpg",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (1).png",
+    "title": "character (1)",
+    "image": "images/portfolio/character_design/character%20(1).png",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (2).jpg",
+    "title": "character (2)",
+    "image": "images/portfolio/character_design/character%20(2).jpg",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (2).png",
+    "title": "character (2)",
+    "image": "images/portfolio/character_design/character%20(2).png",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (3).jpg",
+    "title": "character (3)",
+    "image": "images/portfolio/character_design/character%20(3).jpg",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (3).png",
+    "title": "character (3)",
+    "image": "images/portfolio/character_design/character%20(3).png",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (4).jpg",
+    "title": "character (4)",
+    "image": "images/portfolio/character_design/character%20(4).jpg",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (4).png",
+    "title": "character (4)",
+    "image": "images/portfolio/character_design/character%20(4).png",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (5).jpg",
+    "title": "character (5)",
+    "image": "images/portfolio/character_design/character%20(5).jpg",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (5).png",
+    "title": "character (5)",
+    "image": "images/portfolio/character_design/character%20(5).png",
+    "category": "character-design"
+  },
+  {
+    "id": "character_design/character (6).png",
+    "title": "character (6)",
+    "image": "images/portfolio/character_design/character%20(6).png",
+    "category": "character-design"
+  },
+  {
+    "id": "illustration/between_panels_wallpaper.png",
+    "title": "between panels wallpaper",
+    "image": "images/portfolio/illustration/between_panels_wallpaper.png",
+    "category": "illustration"
+  },
+  {
+    "id": "illustration/illustration (1).jpg",
+    "title": "illustration (1)",
+    "image": "images/portfolio/illustration/illustration%20(1).jpg",
+    "category": "illustration"
+  },
+  {
+    "id": "illustration/illustration (2).jpg",
+    "title": "illustration (2)",
+    "image": "images/portfolio/illustration/illustration%20(2).jpg",
+    "category": "illustration"
+  },
+  {
+    "id": "illustration/illustration (3).jpg",
+    "title": "illustration (3)",
+    "image": "images/portfolio/illustration/illustration%20(3).jpg",
+    "category": "illustration"
+  },
+  {
+    "id": "illustration/illustration (4).jpg",
+    "title": "illustration (4)",
+    "image": "images/portfolio/illustration/illustration%20(4).jpg",
+    "category": "illustration"
+  },
+  {
+    "id": "illustration/illustration (5).jpg",
+    "title": "illustration (5)",
+    "image": "images/portfolio/illustration/illustration%20(5).jpg",
+    "category": "illustration"
+  },
+  {
+    "id": "illustration/illustration (6).jpg",
+    "title": "illustration (6)",
+    "image": "images/portfolio/illustration/illustration%20(6).jpg",
+    "category": "illustration"
+  },
+  {
+    "id": "illustration/illustration (7).jpg",
+    "title": "illustration (7)",
+    "image": "images/portfolio/illustration/illustration%20(7).jpg",
+    "category": "illustration"
+  },
+  {
+    "id": "illustration/illustration (8).jpg",
+    "title": "illustration (8)",
+    "image": "images/portfolio/illustration/illustration%20(8).jpg",
+    "category": "illustration"
+  },
+  {
+    "id": "manga/manga (1).jpg",
+    "title": "manga (1)",
+    "image": "images/portfolio/manga/manga%20(1).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (2).jpg",
+    "title": "manga (2)",
+    "image": "images/portfolio/manga/manga%20(2).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (3).jpg",
+    "title": "manga (3)",
+    "image": "images/portfolio/manga/manga%20(3).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (4).jpg",
+    "title": "manga (4)",
+    "image": "images/portfolio/manga/manga%20(4).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (5).jpg",
+    "title": "manga (5)",
+    "image": "images/portfolio/manga/manga%20(5).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (6).jpg",
+    "title": "manga (6)",
+    "image": "images/portfolio/manga/manga%20(6).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (7).jpg",
+    "title": "manga (7)",
+    "image": "images/portfolio/manga/manga%20(7).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (8).jpg",
+    "title": "manga (8)",
+    "image": "images/portfolio/manga/manga%20(8).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (9).jpg",
+    "title": "manga (9)",
+    "image": "images/portfolio/manga/manga%20(9).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (10).jpg",
+    "title": "manga (10)",
+    "image": "images/portfolio/manga/manga%20(10).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (11).jpg",
+    "title": "manga (11)",
+    "image": "images/portfolio/manga/manga%20(11).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (12).jpg",
+    "title": "manga (12)",
+    "image": "images/portfolio/manga/manga%20(12).jpg",
+    "category": "manga"
+  },
+  {
+    "id": "manga/manga (13).jpg",
+    "title": "manga (13)",
+    "image": "images/portfolio/manga/manga%20(13).jpg",
+    "category": "manga"
+  }
+]
